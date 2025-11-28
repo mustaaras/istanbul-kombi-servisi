@@ -22,14 +22,14 @@ export default function Navbar() {
 
             <div style={{ display: 'flex', gap: '2rem' }}>
                 <Link href="/" style={{ fontWeight: 500 }}>Ana Sayfa</Link>
-                <Link href="#services" style={{ fontWeight: 500 }}>Hizmetler</Link>
-                <Link href="#map" style={{ fontWeight: 500 }}>Harita</Link>
-                <Link href="#contact" style={{ fontWeight: 500 }}>İletişim</Link>
+                <Link href="/services" style={{ fontWeight: 500 }}>Servisler</Link>
+                <Link href="/#map" style={{ fontWeight: 500 }}>Harita</Link>
+                <Link href="/#contact" style={{ fontWeight: 500 }}>İletişim</Link>
             </div>
 
-            <button className="btn btn-primary">
+            <Link href="/services" className="btn btn-primary">
                 Servis Bul
-            </button>
+            </Link>
         </nav>
     );
 }

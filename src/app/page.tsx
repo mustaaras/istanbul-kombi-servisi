@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Navbar from "@/components/Navbar";
+import LeadForm from "@/components/lead-form";
 import { MapPin, Wrench, Star, Phone, Search, ShieldCheck, Clock } from "lucide-react";
 
 export default function Home() {
@@ -160,25 +161,27 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section style={{ padding: '6rem 0', textAlign: 'center', background: 'linear-gradient(to top, var(--bg-primary), var(--bg-secondary))' }}>
+      {/* Lead Form Section */}
+      <section id="contact" style={{ padding: '6rem 0', background: 'linear-gradient(to top, var(--bg-primary), var(--bg-secondary))' }}>
         <div className="container">
-          <div className="glass-panel" style={{ maxWidth: '800px', margin: '0 auto', padding: '4rem 2rem' }}>
-            <h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1.5rem' }}>
-              Hemen Servis Çağırın
-            </h2>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '1.25rem', marginBottom: '2rem' }}>
-              Beklemeyin, soğukta kalmayın. Size en yakın servisi hemen bulun.
-            </p>
-            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <button className="btn btn-primary">
-                <Search size={20} style={{ marginRight: '0.5rem' }} />
-                Servis Ara
-              </button>
-              <button className="btn btn-accent">
-                <Phone size={20} style={{ marginRight: '0.5rem' }} />
-                Bizi Arayın
-              </button>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1.5rem' }}>
+                Hemen <span className="text-gradient">Teklif Alın</span>
+              </h2>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '1.25rem', marginBottom: '2rem' }}>
+                Kombinizle ilgili sorunu bize bildirin, uzman ekiplerimiz en kısa sürede size ulaşsın.
+                <br /><br />
+                <span className="flex items-center gap-2 text-white">
+                  <ShieldCheck className="text-green-500" /> Ücretsiz Danışmanlık
+                </span>
+                <span className="flex items-center gap-2 text-white mt-2">
+                  <Clock className="text-blue-500" /> 30 Dakikada Dönüş
+                </span>
+              </p>
+            </div>
+            <div>
+              <LeadForm />
             </div>
           </div>
         </div>
